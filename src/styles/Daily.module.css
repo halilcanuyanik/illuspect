@@ -1,0 +1,18 @@
+.dailyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  height: 80vh;
+  width: 100%;
+  margin-top: 2rem;
+
+  background-color: #f1f3f5;
+}
+
+.dailyHeader {
+  font-weight: 500;
+  color: var(--quaternary-dark);
+}

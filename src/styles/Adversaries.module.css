@@ -1,0 +1,99 @@
+@import url("../data/variables.css");
+
+.adContainer {
+  width: 100%;
+  min-height: 180px; /* vh yerine min-height kullandık */
+  padding: 20px 0; /* Yukarıdan ve aşağıdan boşluk */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.adTitle {
+  font-weight: 500;
+  font-size: clamp(0.75rem, 2vw, 0.84rem); /* Responsive font size */
+  color: #adb5bd;
+  margin-bottom: 15px;
+}
+
+.ads {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Küçük ekranlarda alt satıra geçmesi için */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Varsayılan gap daha küçük */
+}
+
+.nejm,
+.lancet,
+.jama,
+.bmj,
+.nm {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+}
+
+/* Logo boyutları için responsive yaklaşım */
+.nejm {
+  max-height: 2rem;
+}
+
+.lancet {
+  max-height: 1rem;
+}
+
+.jama {
+  max-height: 6rem;
+}
+
+.bmj {
+  max-height: 4rem;
+}
+
+.nm {
+  max-height: 5rem;
+}
+
+/* Tablet boyutları için ayarlar */
+@media (min-width: 768px) {
+  .ads {
+    gap: 4rem;
+  }
+}
+
+/* Desktop boyutları için ayarlar */
+@media (min-width: 1024px) {
+  .ads {
+    gap: 6rem;
+  }
+
+  .adContainer {
+    height: 28vh;
+  }
+}
+
+/* Mobil cihazlar için ek ayarlar */
+@media (max-width: 480px) {
+  .ads {
+    gap: 1rem;
+    padding: 0 10px;
+  }
+
+  .nejm,
+  .lancet,
+  .jama,
+  .bmj,
+  .nm {
+    max-height: 3rem;
+  }
+
+  .lancet {
+    max-height: 0.8rem;
+  }
+}

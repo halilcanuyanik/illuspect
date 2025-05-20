@@ -1,0 +1,123 @@
+.navContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  position: relative;
+}
+
+.imgPlaceHolder {
+  z-index: 10;
+}
+
+.title {
+  color: var(--quaternary-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: var(--quaternary-color);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Nav items */
+.navSection {
+  display: flex;
+  gap: 1rem;
+}
+
+.navOption,
+.lastNavOption {
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.lastNavOption {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.navOption:hover {
+  color: var(--ternary-color);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.lastNavOption:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navContainer {
+    padding: 1rem;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .navSection {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+  }
+
+  .navSection.menuOpen {
+    max-height: 500px;
+  }
+
+  .navOption,
+  .lastNavOption {
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  /* Hamburger animation */
+  .menuButton .hamburger.open:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menuButton .hamburger.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menuButton .hamburger.open:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
