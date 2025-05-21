@@ -10,7 +10,7 @@ function Daily() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === size - 1 ? 0 : prev + 1));
-    }, 10000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);

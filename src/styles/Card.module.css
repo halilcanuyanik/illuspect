@@ -125,3 +125,108 @@
   color: var(--quaternary-dark);
   text-decoration: none;
 }
+
+@media (max-width: 1200px) {
+  .cardTag {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.5rem;
+  }
+
+  .cardImg {
+    height: 30%;
+  }
+
+  .cardName {
+    font-size: 1.2rem;
+  }
+
+  .cardText {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 756px) {
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    width: 80%;
+  }
+
+  .cardTag {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 0.4rem 1.6rem;
+    font-size: 0.6rem;
+
+    color: #fff;
+    background-color: var(--ternary-color);
+    font-weight: bold;
+    text-align: center;
+
+    /* Rotation and Placement */
+    transform: translate(29.29%, -100%) rotate(45deg);
+    transform-origin: bottom left;
+
+    /* 29.29% = 100% - (100% / √2) ≈ 100% - 70.71% */
+    /* This mathematical calculation places it right in the corner */
+  }
+
+  .cardImgContainer {
+    width: 100%;
+    height: 30%;
+  }
+
+  .cardImg {
+    height: 80%;
+  }
+
+  .cardInfo {
+    height: 70%;
+    width: 100%;
+  }
+
+  .cardName {
+    justify-self: center;
+
+    grid-column: 2 / 3;
+    grid-row: 1;
+
+    font-size: 1.3rem;
+  }
+
+  .cardCauses {
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cause {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .cardText {
+    font-size: 0.9rem;
+    align-self: center;
+    text-align: center;
+
+    grid-column: 1 / 4;
+    padding: 0 20%;
+  }
+
+  .cardSymptoms {
+    grid-column: 1 / 4;
+    justify-self: center;
+  }
+
+  .symptomList {
+    list-style: none;
+    font-weight: 500;
+    line-height: 1.2rem;
+    font-size: 0.7rem;
+  }
+}

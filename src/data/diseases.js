@@ -166,7 +166,7 @@ const diseases = [
     ],
     explanation:
       "A psychological disorder where people feel compelled to eat non-nutritive substances such as dirt, chalk, or paper.",
-    tag: "Psychiatric / Nutritional",
+    tag: "Psychiatric",
     imgPath: require("../assets/diseases-img/pica.png"),
   },
   {
@@ -192,7 +192,7 @@ const diseases = [
     ],
     explanation:
       "A rare genetic disorder where the person stops breathing involuntarily during sleep and requires assisted ventilation.",
-    tag: "Genetic / Respiratory",
+    tag: "Genetic",
     imgPath: require("../assets/diseases-img/ondines-curse.png"),
   },
   {
@@ -207,8 +207,80 @@ const diseases = [
     ],
     explanation:
       "Also known as 'Sleeping Beauty Syndrome', it causes recurring episodes of excessive sleep and altered behavior.",
-    tag: "Neurological / Sleep Disorder",
+    tag: "Neurological",
     imgPath: require("../assets/diseases-img/sleeping-beauty.png"),
+  },
+  {
+    name: "Exploding Head Syndrome",
+    causes: ["Sleep disturbance", "Stress"],
+    symptoms: [
+      "Loud imagined noises during sleep",
+      "Sleep disruption",
+      "Fear of sleeping",
+    ],
+    explanation:
+      "A sleep disorder involving the perception of loud, sudden noises when falling asleep or waking up.",
+    tag: "Neurological",
+    imgPath: require("../assets/diseases-img/exploding-head.png"),
+  },
+  {
+    name: "Stendhal Syndrome",
+    causes: ["Sensory overload"],
+    symptoms: ["Dizziness", "Rapid heartbeat", "Hallucinations", "Confusion"],
+    explanation:
+      "A psychosomatic disorder causing emotional or physical symptoms when exposed to overwhelming beauty or art.",
+    tag: "Psychiatric",
+    imgPath: require("../assets/diseases-img/stendhal.png"),
+  },
+  {
+    name: "Stiff Person Syndrome",
+    causes: ["Autoimmune response", "Genetic predisposition"],
+    symptoms: [
+      "Muscle stiffness",
+      "Painful spasms",
+      "Difficulty walking",
+      "Sensitivity to noise",
+    ],
+    explanation:
+      "A rare neurological disorder causing severe muscle rigidity and spasms, often triggered by stress or noise.",
+    tag: "Neurological",
+    imgPath: require("../assets/diseases-img/muscle-spasm.png"),
+  },
+  {
+    name: "Aquagenic Urticaria",
+    causes: ["Unknown", "Allergic response"],
+    symptoms: ["Skin rash after water exposure", "Burning sensation", "Hives"],
+    explanation:
+      "An extremely rare allergy to water, where even brief exposure causes painful skin reactions.",
+    tag: "Dermatological",
+    imgPath: require("../assets/diseases-img/hydrophobia.png"),
+  },
+  {
+    name: "Progeria",
+    causes: ["Genetic mutation"],
+    symptoms: [
+      "Accelerated aging",
+      "Hair loss",
+      "Joint stiffness",
+      "Growth failure",
+    ],
+    explanation:
+      "A rare genetic condition that causes children to age rapidly, leading to early death.",
+    tag: "Genetic",
+    imgPath: require("../assets/diseases-img/progeria.png"),
+  },
+  {
+    name: "Situs Inversus",
+    causes: ["Genetic"],
+    symptoms: [
+      "No symptoms (often)",
+      "Reversed organ placement",
+      "Occasional heart issues",
+    ],
+    explanation:
+      "A congenital condition in which major organs are reversed or mirrored from their normal positions.",
+    tag: "Genetic",
+    imgPath: require("../assets/diseases-img/situs-intervus.png"),
   },
 ];
 

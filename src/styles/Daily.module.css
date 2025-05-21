@@ -7,7 +7,7 @@
 
   height: 80vh;
   width: 100%;
-  margin-top: 2rem;
+  padding: 1rem;
 
   background-color: #f1f3f5;
 }
@@ -15,4 +15,25 @@
 .dailyHeader {
   font-weight: 500;
   color: var(--quaternary-dark);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .dailyContainer {
+    gap: 1.5rem;
+    height: 80vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .dailyContainer {
+    gap: 1rem;
+    height: 90vh;
+    margin-top: 1rem;
+  }
+
+  .dailyHeader {
+    font-size: 1.2rem;
+  }
 }
